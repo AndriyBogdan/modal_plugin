@@ -1,0 +1,61 @@
+.modal-window, .modal-overlay {
+  opacity: 0;
+  z-index: -1; }
+
+.modal.open .modal-overlay, .modal.open .modal-window {
+  opacity: 1;
+  z-index: 1000; }
+
+.modal.hidden .modal-overlay, .modal.hidden .modal-window {
+  opacity: 1;
+  z-index: 1000; }
+
+.modal .modal-overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.8s ease-in; }
+  .modal .modal-overlay .modal-window {
+    width: 600px;
+    height: auto;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    background: beige;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 1s ease-in; }
+    .modal .modal-overlay .modal-window .modal-header {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2); }
+      .modal .modal-overlay .modal-window .modal-header .modal-title {
+        margin: 0; }
+      .modal .modal-overlay .modal-window .modal-header .modal-close {
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold; }
+        .modal .modal-overlay .modal-window .modal-header .modal-close:hover {
+          color: crimson; }
+    .modal .modal-overlay .modal-window .modal-body {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center; }
+    .modal .modal-overlay .modal-window .modal-footer {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+      border-top: 2px solid rgba(0, 0, 0, 0.2); }
+
+/*# sourceMappingURL=modal.css.map */
